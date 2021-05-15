@@ -2,6 +2,7 @@
 This is a project where I try to develop VR interactions based of XR Toolkit by Unity</br>
 Plan for this project is to constantly be developed and updated with new mechanics or fixes to existing ones</br>
 Models used for weapons are courtesy of [Jack Smith](https://www.linkedin.com/in/jack-smith-6448a0196/)</br>
+Target model sourced from [draconixdust](https://free3d.com/3d-model/shooting-range-targhet-22266.html)</br>
 </br>
 **Some of the mechanics i developed can be seen below:**</br></br>
 Half-Life Alyx inspired object grabbing -
