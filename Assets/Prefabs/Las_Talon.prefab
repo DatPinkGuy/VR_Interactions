@@ -1250,7 +1250,7 @@ MonoBehaviour:
   reloadTime: 0
   magSlot: {fileID: 8588935888355244828}
   audioSource: {fileID: 8588935888349435076}
-  dryFire: {fileID: 8300000, guid: 873ab7de6666d7c428e82fb8962f595d, type: 3}
+  dryFire: {fileID: 8300000, guid: 871b46ac5b144f940a6bb27ff9acc8aa, type: 3}
   bulletShoot: {fileID: 8300000, guid: 418a587a430e2eb4e8190e9036a51931, type: 3}
 --- !u!82 &8588935888349435076
 AudioSource:
