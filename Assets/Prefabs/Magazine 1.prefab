@@ -355,6 +355,7 @@ MonoBehaviour:
   isInHand: 0
   magSize: 10
   currentSize: 0
+  objectToDisable: {fileID: 7592628338701856492}
 --- !u!65 &7355458009127781452
 BoxCollider:
   m_ObjectHideFlags: 0

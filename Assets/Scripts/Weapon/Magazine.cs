@@ -22,14 +22,14 @@ namespace Weapon
         [SerializeField] private bool isInHand;
         [SerializeField] private int magSize;
         [SerializeField] private int currentSize;
-     
+        [SerializeField] private GameObject objectToDisable;
         public int CurrentSize
         {
             get => currentSize;
             set => currentSize = value;
         }
-
         public Transform MagSlotT { get; set; }
+        public GameObject ObjectToDisable { get; private set; }
         public bool IsInUse
         {
             set => isInUse = value;
@@ -91,6 +91,13 @@ namespace Weapon
         {
             yield return new WaitForEndOfFrame();
             transform.parent = MagSlotT.parent;
+        }
+
+        public void DisableChildObject()
+        {
+            if (!objectToDisable) return;
+            if (currentSize > 0) return;
+            objectToDisable.SetActive(false);
         }
     }
 }

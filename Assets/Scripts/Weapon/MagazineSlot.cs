@@ -68,6 +68,7 @@ namespace Weapon
             currentMagazine.IsInUse = false;
             isMagazineAttached = false;
             if (magOut && currentMagazine.IsInHand) audioSource.PlayOneShot(magOut);
+            currentMagazine.DisableChildObject();
             currentMagazine = null;
         }
 

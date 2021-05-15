@@ -8,7 +8,7 @@ public class HandPresence : MonoBehaviour
 {
     private InputDevice _currentController;
     private GameObject _spawnedHand;
-    private Animator HandAnimator => _spawnedHand.GetComponent<Animator>();
+    private Animator _handAnimator;
     [SerializeField] private InputDeviceCharacteristics controllerCharacteristics;
     [SerializeField] private GameObject controllerPrefab;
     private static readonly int Trigger = Animator.StringToHash("Trigger");
@@ -34,21 +34,22 @@ public class HandPresence : MonoBehaviour
         if (controller.Count == 0) return;
         _currentController = controller[0];
         _spawnedHand = Instantiate(controllerPrefab, transform);
+        _handAnimator = _spawnedHand.GetComponent<Animator>();
     }
     
     private void UpdateAnimation()
     {
-        if (!HandAnimator) return;
+        if (!_handAnimator) return;
         if (_currentController.TryGetFeatureValue(CommonUsages.trigger, out var triggerValue))
         {
-            HandAnimator.SetFloat(Trigger, triggerValue);
+            _handAnimator.SetFloat(Trigger, triggerValue);
         }
-        else HandAnimator.SetFloat(Trigger, 0);
+        else _handAnimator.SetFloat(Trigger, 0);
         
         if (_currentController.TryGetFeatureValue(CommonUsages.grip, out var gripValue))
         {
-            HandAnimator.SetFloat(Grip, gripValue);
+            _handAnimator.SetFloat(Grip, gripValue);
         }
-        else HandAnimator.SetFloat(Grip, 0);
+        else _handAnimator.SetFloat(Grip, 0);
     }
 }
