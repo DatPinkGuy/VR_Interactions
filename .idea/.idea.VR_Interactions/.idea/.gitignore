@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/modules.xml
+/.idea.VR_Interactions.iml
+# Datasource local storage ignored files
+/../../../../../../:\GitHubProject\VR_Interactions\.idea\.idea.VR_Interactions\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
